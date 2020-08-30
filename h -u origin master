@@ -9,7 +9,7 @@ Author: John Mwai <jmwai@conncol.edu>
 Date:   Sun Aug 30 14:09:15 2020 -0400
 
     Revert "index.html"
-    
+
     This reverts commit cf6429b12bfa5001e9011c58eae5a44c9be7b4dd.
 
 [33mcommit cf6429b12bfa5001e9011c58eae5a44c9be7b4dd[m
