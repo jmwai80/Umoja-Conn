@@ -1,0 +1,31 @@
+[33mcommit 281d50ca48afaf8353e7d789608a01c4d29f6405[m[33m ([m[1;36mHEAD -> [m[1;32mumoja_app[m[33m)[m
+Author: John Mwai <jmwai@conncol.edu>
+Date:   Sun Aug 30 14:24:01 2020 -0400
+
+    added umoja app
+
+[33mcommit 66961242bc7d2c3a4d688f0c2b3556d7f6844b2e[m
+Author: John Mwai <jmwai@conncol.edu>
+Date:   Sun Aug 30 14:09:15 2020 -0400
+
+    Revert "index.html"
+    
+    This reverts commit cf6429b12bfa5001e9011c58eae5a44c9be7b4dd.
+
+[33mcommit cf6429b12bfa5001e9011c58eae5a44c9be7b4dd[m
+Author: John Mwai <jmwai@conncol.edu>
+Date:   Sun Aug 30 14:05:22 2020 -0400
+
+    index.html
+
+[33mcommit 77b5d06a1366e259adcb81d8d6a30b6d003cd87a[m
+Author: John Mwai <jmwai@conncol.edu>
+Date:   Sun Aug 30 13:59:29 2020 -0400
+
+    run migrations
+
+[33mcommit e7e66b63c0f6dabc8950acc87070ba427d25cecd[m
+Author: John Mwai <jmwai@conncol.edu>
+Date:   Sun Aug 30 13:55:37 2020 -0400
+
+    umoja project initialized
