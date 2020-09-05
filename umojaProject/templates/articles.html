@@ -76,12 +76,19 @@
 
     <div class="col-md-10 offset-md-3">
         <div class="col-lg-8">
-<div class = "alert alert-danger">  
+<div class = "alert alert-danger">
 No Article Found
 </div>
 </div>
 </div>
 </div>
 {% endif %}
+<p>Hello , I'm testing</p>
+{% for recent_article in recent_articles %}
+<p>Recent</p>
+<p class="lead">
 
+    {{recent_article.content|safe|truncatewords:20}}
+</p>
+{% endfor %}
 {% endblock body %}

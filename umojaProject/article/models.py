@@ -8,7 +8,8 @@ class Article(models.Model):
     content = RichTextField()
     created_date = models.DateTimeField(auto_now_add=True,verbose_name="Creation Date")
     article_image = models.FileField(blank = True,null = True,verbose_name="Add Photos to Article")
-    slug = models.SlugField(unique=True, max_length=100)
+    published = models.BooleanField(default=True)
+    slug = models.SlugField(unique=True, max_length=100,blank=True)
 
     def __str__(self):
         return self.title

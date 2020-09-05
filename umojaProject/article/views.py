@@ -8,13 +8,14 @@ from django.contrib.auth.decorators import login_required
 
 def articles(request):
     keyword = request.GET.get("keyword")
-
+    recent_articles = Article.objects.filter(published=True).order_by('-created_date')[:5]
     if keyword:
         articles = Article.objects.filter(title__contains = keyword)
         return render(request,"articles.html",{"articles":articles})
     articles = Article.objects.all()
 
-    return render(request,"articles.html",{"articles":articles})
+    return render(request,"articles.html",{"articles":articles , "recent_articles":recent_articles})
+
 def index(request):
     return render(request,"index.html")
 
