@@ -55,3 +55,6 @@ class Fellowship(models.Model):
 
 class Resource(models.Model):
     content = RichTextField()
+
+class Gallery(models.Model):
+    image = models.ImageField(upload_to='gallery', null=True, blank=True)
