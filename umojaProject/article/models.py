@@ -30,3 +30,28 @@ class Comment(models.Model):
         return self.comment_content
     class Meta:
         ordering = ['-comment_date']
+
+class Program(models.Model):
+    program_company = models.CharField(max_length=100, null=True)
+    diversity_program = models.CharField(max_length=100, null=True)
+    diversity_link = models.CharField(max_length=100, null=True)
+    diversity_industry = models.CharField(max_length=100, null=True)
+    diversity_population = models.CharField(max_length=100, null=True)
+    date_posted = models.DateTimeField(auto_now_add=True,verbose_name="Posted Date")
+
+class Internship(models.Model):
+    internship_company = models.CharField(max_length=100, null=True)
+    name = models.CharField(max_length=100, null=True)
+    link = models.CharField(max_length=100, null=True)
+    industry = models.CharField(max_length=100, null=True)
+    location = models.CharField(max_length=100, null=True)
+    date_posted = models.DateTimeField(auto_now_add=True,verbose_name="Date")
+
+class Fellowship(models.Model):
+    name = models.CharField(max_length=100, null=True)
+    link =  models.CharField(max_length=100, null=True)
+    location = models.CharField(max_length=100, null=True)
+    date_posted = models.DateTimeField(auto_now_add=True,verbose_name="Posted")
+
+class Resource(models.Model):
+    content = RichTextField()
