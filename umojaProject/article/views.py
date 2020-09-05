@@ -43,9 +43,10 @@ def addArticle(request):
     return render(request,"addarticle.html",{"form":form})
 def detail(request,slug):
     #article = Article.objects.filter(id = id).first()
+    recent_article = get_object_or_404(Article, slug=slug)
     article = get_object_or_404(Article, slug=slug)
     comments = article.comments.all()
-    return render(request,"detail.html",{"article":article,"comments":comments })
+    return render(request,"detail.html",{"article":article,"comments":comments, "recent_article":recent_article})
 @login_required(login_url = "user:login")
 def updateArticle(request, slug):
 

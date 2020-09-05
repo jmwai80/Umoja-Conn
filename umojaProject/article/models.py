@@ -7,7 +7,7 @@ class Article(models.Model):
     title = models.CharField(max_length = 50,verbose_name = "Title")
     content = RichTextField()
     created_date = models.DateTimeField(auto_now_add=True,verbose_name="Creation Date")
-    article_image = models.FileField(blank = True,null = True,verbose_name="Add Photos to Article")
+    article_image = models.FileField(upload_to='img', blank = True,null = True,verbose_name="Add Photos to Article")
     published = models.BooleanField(default=True)
     slug = models.SlugField(unique=True, max_length=100,blank=True)
 
