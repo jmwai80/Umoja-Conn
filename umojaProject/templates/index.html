@@ -1,19 +1,441 @@
 {% extends "layout.html" %}
 
-{% block body %}
 
-<div class="jumbotron text-center">
-        <h3>umojaProject</h3>
-        <p> This is a nice blog.</p>
-</div>
+{% block content %}
 
+<!-- Home Design -->
+<section class="home-one style4 parallax ulockd_bgih2" data-stellar-background-ratio="0.3">
+  <div class="container">
+    <div class="row home-content">
+      <div class="col-lg-8">
+        <div class="home-text">
+          <h2 class="fz40 color-white">Find The Job That Fits Your Life</h2>
+          <p class="color-white">Each month, more than 7 million jobseekers turn to website in their search for work, making over 160,000 applications every day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<p>
-        {% if request.user.is_authenticated %}
-        Logged In, {{request.user.username}}
-        {% else %}
-                Not Logged In
-        {% endif %}
+<!-- Popular Job Categories -->
+<section class="popular-job home4 pb30">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ulockd-main-title">
+          <h3 class="mt0">Recent Posts</h3>
+          <a class="color-blue float-right" href="#">Browse All Categories <i class="flaticon-right-arrow pl15"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-lg-3">
+        <a href="a" class="icon_hvr_img_box sbbg1 home4" style="background-image: url(images/service/1.jpg);">
+          <div class="overlay">
+            <div class="icon"><span class="flaticon-pen"></span></div>
+            <div class="details">
+              <h5>Design, Art & Multimedia</h5>
+              <p>22 Open Positions</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <a href="a" class="icon_hvr_img_box sbbg2 home4" style="background-image: url(images/service/2.jpg);">
+          <div class="overlay">
+            <div class="icon"><span class="flaticon-mortarboard"></span></div>
+            <div class="details">
+              <h5>Education Training</h5>
+              <p>48 Open Positions</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <a href="a" class="icon_hvr_img_box sbbg3 home4" style="background-image: url(images/service/3.jpg);">
+          <div class="overlay">
+            <div class="icon"><span class="flaticon-bars"></span></div>
+            <div class="details">
+              <h5>Accounting / Finance</h5>
+              <p>97 Open Positions</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <a href="a" class="icon_hvr_img_box sbbg4 home4" style="background-image: url(images/service/4.jpg);">
+          <div class="overlay">
+            <div class="icon"><span class="flaticon-interview"></span></div>
+            <div class="details">
+              <h5>Human Resource</h5>
+              <p>17 Open Positions</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <a href="a" class="icon_hvr_img_box sbbg5 home4" style="background-image: url(images/service/5.jpg);">
+          <div class="overlay">
+            <div class="icon"><span class="flaticon-antenna"></span></div>
+            <div class="details">
+              <h5>Telecommunications</h5>
+              <p>60 Open Positions</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <a href="a" class="icon_hvr_img_box sbbg6 home4" style="background-image: url(images/service/6.jpg);">
+          <div class="overlay">
+            <div class="icon"><span class="flaticon-food"></span></div>
+            <div class="details">
+              <h5>Restaurant / Food Service</h5>
+              <p>22 Open Positions</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <a href="a" class="icon_hvr_img_box sbbg7 home4" style="background-image: url(images/service/7.jpg);">
+          <div class="overlay">
+            <div class="icon"><span class="flaticon-customer-support"></span></div>
+            <div class="details">
+              <h5>Construction / Facilities</h5>
+              <p>05 Open Positions</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <a href="a" class="icon_hvr_img_box sbbg8 home4" style="background-image: url(images/service/8.jpg);">
+          <div class="overlay">
+            <div class="icon"><span class="flaticon-care"></span></div>
+            <div class="details">
+              <h5>Health</h5>
+              <p>10 Open Positions</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-</p>
-{% endblock body %}
+<!-- Features Job List Design -->
+<section class="feature-job home4 pb30">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ulockd-main-title">
+          <h3 class="mt0">Featured Students</h3>
+          <a class="color-blue float-right" href="#">Browse All Jobs <i class="flaticon-right-arrow pl15"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="feature_job_post">
+          <div class="details">
+            <div class="thumb">
+              <img class="img-fluid" src="media/images/partners/l1.jpg" alt="l1.jpg">
+            </div>
+            <h5 class="job_chedule text-thm2 mt0">Full Time</h5>
+            <h4>JEB Product Sales Specialist</h4>
+            <p>Posted 23 August</p>
+          </div>
+          <ul class="fj_post_meta">
+            <li class="list-inline-item float-left"><span class="flaticon-location-pin"></span> <a href="#">Bothell, WA, USA</a></li>
+            <li class="list-inline-item float-right"><a class="btn" href="#">Browse Job</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="feature_job_post">
+          <div class="details">
+            <div class="thumb">
+              <img class="img-fluid" src="media/images/partners/l2.jpg" alt="l2.jpg">
+            </div>
+            <h5 class="job_chedule text-thm2 mt0">Part Time</h5>
+            <h4>General Ledger Accountant</h4>
+            <p>Yesterday</p>
+          </div>
+          <ul class="fj_post_meta">
+            <li class="list-inline-item float-left"><span class="flaticon-location-pin"></span> <a href="#">RG40, Wokingham</a></li>
+            <li class="list-inline-item float-right"><a class="btn" href="#">Browse Job</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="feature_job_post">
+          <div class="details">
+            <div class="thumb">
+              <img class="img-fluid" src="media/images/partners/l3.jpg" alt="l3.jpg">
+            </div>
+            <h5 class="job_chedule text-thm2 mt0">Full Time</h5>
+            <h4>Junior Digital Graphic Designer</h4>
+            <p>Posted 23 September</p>
+          </div>
+          <ul class="fj_post_meta">
+            <li class="list-inline-item float-left"><span class="flaticon-location-pin"></span> <a href="#">New Denham, UB8 1JG</a></li>
+            <li class="list-inline-item float-right"><a class="btn" href="#">Browse Job</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="feature_job_post">
+          <div class="details">
+            <div class="thumb">
+              <img class="img-fluid" src="media/images/partners/l4.jpg" alt="l4.jpg">
+            </div>
+            <h5 class="job_chedule text-thm2 mt0">Full Time</h5>
+            <h4>UX/UI Designer</h4>
+            <p>Yesterday</p>
+          </div>
+          <ul class="fj_post_meta">
+            <li class="list-inline-item float-left"><span class="flaticon-location-pin"></span> <a href="#">Bothell, WA, USA</a></li>
+            <li class="list-inline-item float-right"><a class="btn" href="#">Browse Job</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="feature_job_post">
+          <div class="details">
+            <div class="thumb">
+              <img class="img-fluid" src="media/images/partners/l5.jpg" alt="l5.jpg">
+            </div>
+            <h5 class="job_chedule text-thm2 mt0">Full Time</h5>
+            <h4>Technical Support Specialist</h4>
+            <p>Posted 23 April</p>
+          </div>
+          <ul class="fj_post_meta">
+            <li class="list-inline-item float-left"><span class="flaticon-location-pin"></span> <a href="#">Moscow, Russia</a></li>
+            <li class="list-inline-item float-right"><a class="btn" href="#">Browse Job</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="feature_job_post">
+          <div class="details">
+            <div class="thumb">
+              <img class="img-fluid" src="media/images/partners/l6.jpg" alt="l6.jpg">
+            </div>
+            <h5 class="job_chedule text-thm2 mt0">Full Time</h5>
+            <h4>Senior UX Designer</h4>
+            <p>2 Hours Ago</p>
+          </div>
+          <ul class="fj_post_meta">
+            <li class="list-inline-item float-left"><span class="flaticon-location-pin"></span> <a href="#">Bothell, WA, USA</a></li>
+            <li class="list-inline-item float-right"><a class="btn" href="#">Browse Job</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Browse Local Jobs -->
+<section class="carrer-tips home4 pb30">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="ulockd-main-title">
+          <h3 class="mt0">Quick Career Tips</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="carrer_tips_slider2">
+          <div class="item">
+            <div class="quick_tips_home4">
+              <div class="thumb">
+                <img class="img-fluid" src="media/images/blog/h41.jpg" alt="h41.jpg">
+                <div class="serial">01</div>
+              </div>
+              <div class="details">
+                <h5>Tips</h5>
+                <h4>Attract More Attention Sales <br> And Profits</h4>
+                <ul class="post_meta">
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-clock"></span> 03rd Nov, 2019</a></li>
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-chat"></span> 0 comments</a></li>
+                </ul>
+                <a class="btn text-thm" href="#">Read More <i class="flaticon-right-arrow pl15"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="quick_tips_home4">
+              <div class="thumb">
+                <img class="img-fluid" src="media/images/blog/h42.jpg" alt="h42.jpg">
+                <div class="serial">02</div>
+              </div>
+              <div class="details">
+                <h5>Marketing</h5>
+                <h4>11 Tips to Help You Get New <br> Clients</h4>
+                <ul class="post_meta">
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-clock"></span> 03rd Nov, 2019</a></li>
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-chat"></span> 0 comments</a></li>
+                </ul>
+                <a class="btn text-thm" href="#">Read More <i class="flaticon-right-arrow pl15"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="quick_tips_home4">
+              <div class="thumb">
+                <img class="img-fluid" src="media/images/blog/h43.jpg" alt="h43.jpg">
+                <div class="serial">03</div>
+              </div>
+              <div class="details">
+                <h5>Tips</h5>
+                <h4>An Overworked Newspaper <br> Editor</h4>
+                <ul class="post_meta">
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-clock"></span> 03rd Nov, 2019</a></li>
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-chat"></span> 0 comments</a></li>
+                </ul>
+                <a class="btn text-thm" href="#">Read More <i class="flaticon-right-arrow pl15"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="quick_tips_home4">
+              <div class="thumb">
+                <img class="img-fluid" src="media/images/blog/h41.jpg" alt="h41.jpg">
+                <div class="serial">01</div>
+              </div>
+              <div class="details">
+                <h5>Tips</h5>
+                <h4>Attract More Attention Sales <br> And Profits</h4>
+                <ul class="post_meta">
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-clock"></span> 03rd Nov, 2019</a></li>
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-chat"></span> 0 comments</a></li>
+                </ul>
+                <a class="btn text-thm" href="#">Read More <i class="flaticon-right-arrow pl15"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="quick_tips_home4">
+              <div class="thumb">
+                <img class="img-fluid" src="media/images/blog/h42.jpg" alt="h42.jpg">
+                <div class="serial">02</div>
+              </div>
+              <div class="details">
+                <h5>Marketing</h5>
+                <h4>11 Tips to Help You Get New <br> Clients</h4>
+                <ul class="post_meta">
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-clock"></span> 03rd Nov, 2019</a></li>
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-chat"></span> 0 comments</a></li>
+                </ul>
+                <a class="btn text-thm" href="#">Read More <i class="flaticon-right-arrow pl15"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="quick_tips_home4">
+              <div class="thumb">
+                <img class="img-fluid" src="media/images/blog/h43.jpg" alt="h43.jpg">
+                <div class="serial">03</div>
+              </div>
+              <div class="details">
+                <h5>Tips</h5>
+                <h4>An Overworked Newspaper <br> Editor</h4>
+                <ul class="post_meta">
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-clock"></span> 03rd Nov, 2019</a></li>
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-chat"></span> 0 comments</a></li>
+                </ul>
+                <a class="btn text-thm" href="#">Read More <i class="flaticon-right-arrow pl15"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="quick_tips_home4">
+              <div class="thumb">
+                <img class="img-fluid" src="media/images/blog/h41.jpg" alt="h41.jpg">
+                <div class="serial">01</div>
+              </div>
+              <div class="details">
+                <h5>Tips</h5>
+                <h4>Attract More Attention Sales <br> And Profits</h4>
+                <ul class="post_meta">
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-clock"></span> 03rd Nov, 2019</a></li>
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-chat"></span> 0 comments</a></li>
+                </ul>
+                <a class="btn text-thm" href="#">Read More <i class="flaticon-right-arrow pl15"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="quick_tips_home4">
+              <div class="thumb">
+                <img class="img-fluid" src="media/images/blog/h42.jpg" alt="h42.jpg">
+                <div class="serial">02</div>
+              </div>
+              <div class="details">
+                <h5>Marketing</h5>
+                <h4>11 Tips to Help You Get New <br> Clients</h4>
+                <ul class="post_meta">
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-clock"></span> 03rd Nov, 2019</a></li>
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-chat"></span> 0 comments</a></li>
+                </ul>
+                <a class="btn text-thm" href="#">Read More <i class="flaticon-right-arrow pl15"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="quick_tips_home4">
+              <div class="thumb">
+                <img class="img-fluid" src="media/images/blog/h43.jpg" alt="h43.jpg">
+                <div class="serial">03</div>
+              </div>
+              <div class="details">
+                <h5>Tips</h5>
+                <h4>An Overworked Newspaper <br> Editor</h4>
+                <ul class="post_meta">
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-clock"></span> 03rd Nov, 2019</a></li>
+                  <li class="list-inline-item"><a href="#"><span class="flaticon-chat"></span> 0 comments</a></li>
+                </ul>
+                <a class="btn text-thm" href="#">Read More <i class="flaticon-right-arrow pl15"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Partners -->
+<section class="our-partner home4">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-sm-4 col-lg-2">
+        <div class="our_partners text-center">
+          <img class="img-fluid" src="media/images/partners/5.jpg" alt="5.jpg">
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-lg-3">
+        <div class="our_partners text-center">
+          <img class="img-fluid" src="media/images/partners/6.jpg" alt="6.jpg">
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-lg-2">
+        <div class="our_partners text-center">
+          <img class="img-fluid" src="media/images/partners/7.jpg" alt="7.jpg">
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-lg-3">
+        <div class="our_partners text-center">
+          <img class="img-fluid" src="media/images/partners/8.jpg" alt="8.jpg">
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-lg-2">
+        <div class="our_partners text-center">
+          <img class="img-fluid" src="media/images/partners/9.jpg" alt="9.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

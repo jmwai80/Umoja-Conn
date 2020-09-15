@@ -5,6 +5,7 @@ from ckeditor.fields import RichTextField
 class Article(models.Model):
     author = models.ForeignKey("auth.User",on_delete = models.CASCADE,verbose_name = "Writer ")
     title = models.CharField(max_length = 50,verbose_name = "Title")
+    name = models.CharField(max_length = 50,verbose_name = "Title", blank=True)
     content = RichTextField()
     created_date = models.DateTimeField(auto_now_add=True,verbose_name="Creation Date")
     article_image = models.FileField(upload_to='img', blank = True,null = True,verbose_name="Add Photos to Article")
@@ -54,6 +55,8 @@ class Fellowship(models.Model):
     date_posted = models.DateTimeField(auto_now_add=True,verbose_name="Posted")
 
 class Resource(models.Model):
+    title = models.CharField(max_length=100, null=True)
+    description = models.CharField(max_length=1000, null=True)
     content = RichTextField()
 
 class Gallery(models.Model):

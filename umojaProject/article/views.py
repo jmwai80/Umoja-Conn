@@ -1,6 +1,6 @@
 from django.shortcuts import render,HttpResponse,redirect,get_object_or_404,reverse
 from .forms import ArticleForm
-from .models import Article,Comment
+from .models import Article,Comment,Resource, Internship, Fellowship, Program, Gallery
 from django.contrib import messages
 from django.template.defaultfilters import slugify
 from django.db.models import Count
@@ -19,8 +19,33 @@ def articles(request):
 def index(request):
     return render(request,"index.html")
 
+def resources(request):
+    resources = Resource.objects.all()
+    context = {
+        "resources":resources
+    }
+    return render(request,"resources.html",context)
+
+
+def internships(request):
+    internships = Internship.objects.all()
+    return render(request, 'internships.html', {'internships':internships})
+
+def fellowships(request):
+    fellowships = Fellowship.objects.all()
+    return render(request, 'fellowships.html', {'fellowships':fellowships})
+
+def programs(request):
+    programs = Program.objects.all()
+    return render(request, 'programs.html', {'programs':programs})
+
+def gallerys(request):
+    gallerys = Gallery.objects.all()
+    return render(request, 'gallerys.html', {'gallerys':gallerys})
+
 def about(request):
     return render(request,"about.html")
+
 @login_required(login_url = "user:login")
 def dashboard(request):
     articles = Article.objects.filter(author = request.user)
