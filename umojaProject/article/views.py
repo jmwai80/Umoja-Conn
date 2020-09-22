@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.template.defaultfilters import slugify
 from django.db.models import Count
 from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
 
 def articles(request):
     keyword = request.GET.get("keyword")
@@ -17,8 +18,27 @@ def articles(request):
     return render(request,"articles.html",{"articles":articles , "recent_articles":recent_articles})
 
 def index(request):
+
     return render(request,"index.html")
 
+
+def post_opportunity(request):
+    if request.method == "POST":
+        message_name  = request.POST['message-name']
+        message_email = request.POST['message']
+        message = request.POST['message']
+
+        send_mail(
+        message_name,
+        message,
+        message_email,
+        ['jmwai@conncoll.edu', 'mwaijohn244@gmail.com'],
+
+        )
+
+        return render(request, 'post_opportunity.html', {'message_name':message_name})
+    else:
+        return render(request, "post_opportunity.html", {})
 def resources(request):
     resources = Resource.objects.all()
     context = {

@@ -534,7 +534,7 @@ header.header-nav.menu_style_home_six .sign_up_btn .btn{
 .stylehome1 .mm-btn_next:after,.stylehome1 .mm-btn_prev:before{
     border-color:silver
 }
-.home-one{  
+.home-one{
     margin-top:-31px
 }
 .home-one:before{
@@ -544,17 +544,17 @@ header.header-nav.menu_style_home_six .sign_up_btn .btn{
     left:0;
     top:0;
     width:100%;
-    /* IE10+ */ 
+    /* IE10+ */
     background-image: -ms-linear-gradient(to right,rgba(46, 47, 46,1) 40%, rgba(46, 47, 46,.95) 60%, rgba(46, 47, 46, 0.7) 90%, rgba(46, 47, 46, 0.5) 100%);
-    /* Firefox */ 
+    /* Firefox */
     background-image: -moz-linear-gradient(to right,rgba(46, 47, 46,1) 40%, rgba(46, 47, 46,.95) 60%, rgba(46, 47, 46, 0.7) 90%, rgba(46, 47, 46, 0.5) 100%);
-    /* Opera */ 
+    /* Opera */
     background-image: -o-linear-gradient(to right,rgba(46, 47, 46,1) 40%, rgba(46, 47, 46,.95) 60%, rgba(46, 47, 46, 0.7) 90%, rgba(46, 47, 46, 0.5) 100%);
-    /* Webkit (Safari/Chrome 10) */ 
+    /* Webkit (Safari/Chrome 10) */
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(255,255,255, .01)), color-stop(100, rgba(241,244,249, 1)));
-    /* Webkit (Chrome 11+) */ 
+    /* Webkit (Chrome 11+) */
     background-image: -webkit-linear-gradient(to right,rgba(46, 47, 46,1) 40%, rgba(46, 47, 46,.95) 60%, rgba(46, 47, 46, 0.7) 90%, rgba(46, 47, 46, 0.5) 100%);
-    /* W3C Markup */ 
+    /* W3C Markup */
     background-image: linear-gradient(to right,rgba(46, 47, 46,1) 40%, rgba(46, 47, 46,.95) 60%, rgba(46, 47, 46, 0.7) 90%, rgba(46, 47, 46, 0.5) 100%);
 }
 .home-one.style2 .home-text h2{
@@ -713,17 +713,17 @@ header.header-nav.menu_style_home_six .sign_up_btn .btn{
     z-index:999
 }
 .home-one.style4:before{
-    /* IE10+ */ 
+    /* IE10+ */
     background-image: -ms-linear-gradient(to right,rgba(32, 27, 113,1) 40%, rgba(32, 27, 113,.95) 60%, rgba(32, 27, 113, 0.7) 90%, rgba(32, 27, 113, 0.5) 100%);
-    /* Firefox */ 
+    /* Firefox */
     background-image: -moz-linear-gradient(to right,rgba(32, 27, 113,1) 40%, rgba(32, 27, 113,.95) 60%, rgba(32, 27, 113, 0.7) 90%, rgba(32, 27, 113, 0.5) 100%);
-    /* Opera */ 
+    /* Opera */
     background-image: -o-linear-gradient(to right,rgba(32, 27, 113,1) 40%, rgba(32, 27, 113,.95) 60%, rgba(32, 27, 113, 0.7) 90%, rgba(32, 27, 113, 0.5) 100%);
-    /* Webkit (Safari/Chrome 10) */ 
+    /* Webkit (Safari/Chrome 10) */
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(255,255,255, .01)), color-stop(100, rgba(241,244,249, 1)));
-    /* Webkit (Chrome 11+) */ 
+    /* Webkit (Chrome 11+) */
     background-image: -webkit-linear-gradient(to right,rgba(32, 27, 113,1) 40%, rgba(32, 27, 113,.95) 60%, rgba(32, 27, 113, 0.7) 90%, rgba(32, 27, 113, 0.5) 100%);
-    /* W3C Markup */ 
+    /* W3C Markup */
     background-image: linear-gradient(to right,rgba(32, 27, 113,1) 40%, rgba(32, 27, 113,.95) 60%, rgba(32, 27, 113, 0.7) 90%, rgba(32, 27, 113, 0.5) 100%);
 }
 .home-one.style6:before{
@@ -5279,7 +5279,7 @@ header.header-nav.menu_style_home_six .sign_up_btn .btn{
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
-  transform: rotate(0deg);  
+  transform: rotate(0deg);
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
@@ -6424,7 +6424,7 @@ a.scrollToHome.text-thm:hover{
     color:#fff
 }
 .contact_form_grid{
-    
+
     margin-bottom:80px;
     margin-top:-320px;
     border-radius:4px
@@ -8128,7 +8128,7 @@ section{
 }
 .preloader{
     background-color:#fff;
-    background-image:url(../images/preloader.gif);
+    background-image:url(/media/images/preloader.gif);
     background-position:center center;
     background-repeat:no-repeat;
     height:100%;

@@ -20,10 +20,10 @@
 
 						<div class="mbp_thumb_post mt35">
               {% if article.article_image %}
-							 <a href="{% url 'article:detail' article.slug %}"><img class="img-fluid" src="{{article.article_image.url}}"   alt="Not Found" onerror=this.src="media/images/blog/1.jpg" ></a>
+							 <a href="{% url 'article:detail' article.slug %}"><img class="img-fluid" src="{{article.article_image.url}}"   alt="Not Found" onerror=this.src="/media/images/blog/1.jpg" ></a>
 
                {% else %}
-               	 <a href="{% url 'article:detail' article.slug %}"><img class="img-fluid" src="media/images/blog/1.jpg"  alt="13.jpg"></a>
+               	 <a href="{% url 'article:detail' article.slug %}"><img class="img-fluid" src="/media/images/blog/1.jpg"  alt="13.jpg"></a>
                    {% endif %}
 							<div class="details">
 
@@ -83,21 +83,21 @@
 
 							<ul class="list-group">
 								<div class="media">
-									<img class="align-self-start mr-3" src="media/images/blog/s1.jpg" alt="s1.jpg">
+									<img class="align-self-start mr-3" src="/media/images/blog/s1.jpg" alt="s1.jpg">
 									<div class="media-body">
 										<p class="mt-0 post_title">Canada adds 12,500 jobs in modest July rebound</p>
 										<a href="#">October 25, 2019.</a>
 									</div>
 								</div>
 								<div class="media">
-									<img class="align-self-start mr-3" src="media/images/blog/s2.jpg" alt="s2.jpg">
+									<img class="align-self-start mr-3" src="/media/images/blog/s2.jpg" alt="s2.jpg">
 									<div class="media-body">
 										<p class="mt-0 post_title">Canada adds 12,500 jobs in modest July rebound</p>
 										<a href="#">October 25, 2019.</a>
 									</div>
 								</div>
 								<div class="media">
-									<img class="align-self-start mr-3" src="media/images/blog/s3.jpg" alt="s3.jpg">
+									<img class="align-self-start mr-3" src="/media/images/blog/s3.jpg" alt="s3.jpg">
 									<div class="media-body">
 										<p class="mt-0 post_title">Canada adds 12,500 jobs in modest July rebound</p>
 										<a href="#">October 25, 2019.</a>
