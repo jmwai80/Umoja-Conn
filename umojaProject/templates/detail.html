@@ -1,52 +1,52 @@
 {% extends "layout.html" %}
+{% block content %}
+<!-- Main Blog Post Content -->
+	<section class="blog_post_container bgc-fa">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="main_blog_post_content">
+						<div class="mbp_thumb_post">
+              {% if article.article_image %}
+               <a href="{% url 'article:detail' article.slug %}"><img class="img-fluid" src="{{article.article_image.url}}"   alt="Not Found" onerror=this.src="/media/images/blog/1.jpg" ></a>
 
-{% block body %}
-<div class="row">
+               {% else %}
+                 <a href="{% url 'article:detail' article.slug %}"><img class="img-fluid" src="/media/images/blog/1.jpg"  alt="13.jpg"></a>
+                   {% endif %}
+							<div class="details">
+                <a href="{% url 'article:detail' article.slug %}"><h4 style="color:blue;">{{ article.title}}</h4></a>
+                  <!-- <h5>@UmojaCamels: Posted by: {% if article.name %} {{article.name}} {% else%} Anonymous Post{% endif%}</h5> -->
+                <ul class="post_meta">
+                  <li><a href="#"><span class="flaticon-clock"></span></a></li>
+                  <li><a href="#"><span>Author: {% if article.name %} {{article.name}} {% else%} Anonymous Post{% endif%}</span></a></li>
+                  <li><a href="#"><span>{{ article.created_date}}</span></a></li>
+                  <!-- <li><a href="#"><span class="flaticon-chat"></span></a></li> -->
 
-    <!-- Post Content Column -->
-    <div class="col-lg-8">
-
-      <!-- Title -->
-      <h3 class="mt-4">{{article.title}}</h3>
-
-      <!-- Author -->
-      <p class="lead">
-        published by:
-        {{article.author.username}}
-      </p>
-
-      <hr>
-
-      <!-- Date/Time -->
-      <p>{{article.created_date}}</p>
-
-      <hr>
-
-      <!-- Preview Image -->
-      {% if article.article_image %}
-      <img class="img-fluid rounded" src="{{article.article_image.url}}" alt="">
-      {% endif %}
-
-
-      <hr>
-
-      <!-- Post Content -->
-      <p class="lead">
-          {{article.content|safe}}
-      </p>
-
-      <hr>
-
-      <h4>Yorumlar {% if comments %}({{comments.count }}){% endif %}</h4>
+                </ul>
+<p>{{article.content|safe}}</p>
+							</div>
+							<!-- <ul class="blog_post_share">
+								<li><p>Share This Post</p></li>
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-google"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							</ul> -->
+						</div>
+            <div class="mbp_pagination_comments">
+							<h4 class="title">Comments {% if comments %}({{comments.count }}){% endif %}</h4>
       <hr>
       {% if comments %}
       {% for comment in comments  %}
         <div class="media mb-4">
           <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
           <div class="media-body">
-            <h5 class="mt-0">{{ comment.comment_author}}</h5>
-            {{comment.comment_date}} <br>
-            {{comment.comment_content}}
+
+            <ul>
+                <li class="list-inline-item"><a class="text-thm">{{ comment.comment_author}}</a></li>
+                <li class="list-inline-item"><a href="#"><span class="flaticon-event"></span> {{comment.comment_date}}</a></li>
+              </ul>
+                {{comment.comment_content}}
           </div>
         </div>
       {% endfor %}
@@ -54,31 +54,30 @@
 
       {% else %}
       <div class ="alert alert-danger">
-        This article has no comments, be the first to comment!
+        This Post has no comments, be the first to comment!
       </div>
       {% endif %}
-
-      <div class="card my-4 container">
-          <h5 class="card-header">Add Comment:</h5>
-          <div class="card-body">
-            <form method = "post" action = "{% url 'article:comment' article.slug %}">
-              {% csrf_token %}
-              <div class="form-group">
-                  <label for="formGroupExampleInput">Name</label>
-                  <input name = "comment_author" type="text" class="form-control" id="formGroupExampleInput" placeholder="İsminizi girin">
+      </div>
+						<div class="mbp_comment_form">
+							<h4>Leave Your Review</h4>
+							<form class="comments_form" method = "post" action = "{% url 'article:comment' article.slug %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Name</label>
+                    <input name = "comment_author" type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                  </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Comment</label>
+                  <textarea name = "comment_content" class="form-control" rows="3"></textarea>
                 </div>
-              <div class="form-group">
-                  <label for="formGroupExampleInput">Comment</label>
-                <textarea name = "comment_content" class="form-control" rows="3"></textarea>
-              </div>
-              <button type="submit" class="btn btn-danger my-3">Add</button>
-            </form>
-          </div>
-        </div>
-        </div>
+								<button type="submit" class="btn btn-thm">Submit Comment <span class="flaticon-right-arrow"></span></button>
+							</form>
+						</div>
+					</div>
+				</div>
 
       </div>
+    </div>
+  </section>
 
-
-
-{% endblock body %}
+  {% endblock %}

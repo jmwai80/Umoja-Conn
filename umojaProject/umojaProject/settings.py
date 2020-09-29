@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "ckeditor",
     'trix',
     'django_cleanup',
-
+    'bootstrap4',
 
 ]
 
@@ -135,7 +135,7 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles")
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 CKEDITOR_CONFIGS = {
     "default": {
@@ -146,3 +146,11 @@ CKEDITOR_CONFIGS = {
 }
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+#email
+EMAIL_HOST  =  'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'jmwai@conncoll.edu'
+EMAIL_HOST_PASSWORD =  '80C64r22*!32'
+EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False

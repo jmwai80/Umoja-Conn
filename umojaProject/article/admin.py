@@ -1,11 +1,15 @@
 from django.contrib import admin
 
-from .models import Article,Comment
+from .models import Article,Comment, Program, Internship, Fellowship, Resource, Gallery
 
 # Register your models here.
 
 admin.site.register(Comment)
-
+admin.site.register(Program)
+admin.site.register(Internship)
+admin.site.register(Fellowship)
+admin.site.register(Resource)
+admin.site.register(Gallery)
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
 
@@ -21,3 +25,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
     class Meta:
         model = Article
+
+class GalleryInline(admin.TabularInline):
+    model = Gallery
+    fields = ['picture',]

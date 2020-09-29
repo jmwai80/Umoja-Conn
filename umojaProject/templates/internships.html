@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+<section class="inner_page_breadcrumb bgc-f0 pt30 pb30" aria-label="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h4 class="breadcrumb_title float-left"></h4>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Our Candidate List -->
+<div style="text-align:center; padding-bottom:-30px;">
+  <button type="button" class="btn btn-success" ><a href="{% url 'article:addInternship' %}">Add Internships</a></button>
+  <p style="font-style: italic;">Kindly Contribute to the Internship database. The internship opportunity added by you will only appear on the website after admin approval(This was neccessary
+    to prevent bots from posting.) Thank you so much in advance for contributing</p>
+</div>
+
+
+<section class="our-faq bgc-fa mt50">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-12 col-xl-12">
+        {% for internship in internships %}
+          <div class="col-lg-12 mt30">
+            <div class="fj_post style2 jlv5">
+              <div class="details">
+                <h5 class="job_chedule text-thm">{{internship.internship_company}}</h5>
+                <h4>{{internship.name}}</h4>
+                <p>{{internship.date_posted}} By: <a class="text-thm" href="#">Umoja Conncoll</a></p>
+                <ul class="featurej_post">
+                  <li class="list-inline-item"><span class="flaticon-location-pin"></span> <a href="#">{{internship.location}}</a></li>
+                </ul>
+              </div>
+              <ul class="pjlv5">
+                <li class="list-inline-item"> {{internship.industry}}</li>
+                <li class="list-inline-item">
+                  <a class="favorit" href="#"><span class="flaticon-favorites"></span></a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn btn-transparent" href="{{internship.link}}" target="_blank">Browse Internship</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+</section>
+{% endblock %}

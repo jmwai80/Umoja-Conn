@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+	<!-- Inner Page Breadcrumb -->
+	<section class="inner_page_breadcrumb bgc-f0 pt30 pb30" aria-label="breadcrumb">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h4 class="breadcrumb_title float-left">Login/Register</h4>
+					<ol class="breadcrumb float-right">
+					    <li class="breadcrumb-item"><a href="#">Home</a></li>
+					    <li class="breadcrumb-item active" aria-current="page">Login/Register</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Our LogIn Register -->
+	<section class="our-log-reg bgc-fa">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-lg-6">
+					<div class="login_form">
+						<form action="#">
+							<div class="heading">
+								<h3 class="text-center">Quick Login</h3>
+							</div>
+							 <div class="form-group">
+						    	<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+							</div>
+							<div class="form-group">
+						    	<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+							</div>
+              <textarea id="w3review" name="w3review" rows="4" cols="50" style="resize:true;">
+                </textarea>
+		<br><br><br>
+							<button type="submit" class="btn btn-log btn-block btn-thm">Login</button>
+							<hr>
+							<div class="row mt40">
+								<div class="col-lg">
+									<button type="submit" class="btn btn-block color-white bgc-fb"><i class="fa fa-facebook float-left mt5"></i> Facebook</button>
+								</div>
+								<div class="col-lg">
+									<button type="submit" class="btn btn-block color-white bgc-gogle"><i class="fa fa-google float-left mt5"></i> Google</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+{% endblock %}

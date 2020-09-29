@@ -1,87 +1,63 @@
 {% extends "layout.html" %}
-
-{% block body %}
-
-<div class ="row">
-
-        <div class="col-md-10 offset-md-3">
-            <div class="col-lg-8">
-                <h3>Articles</h3>
-                <hr>
-                </div>
-        </div>
-</div>
-<div class ="row">
-    <div class="col-md-10 offset-md-3">
-        <div class="col-lg-8">
-            <form>
-                 {% csrf_token %}
-                <input type="text" name = "keyword" class="input-sm" maxlength="64" placeholder="Ara...">
-              <button type="submit" class="btn btn-danger">Search</button>
-            </form>
+{% block content %}
+<section class="inner_page_breadcrumb bgc-f0 pt30 pb30" aria-label="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h4 class="breadcrumb_title float-left"></h4>
       </div>
     </div>
+  </div>
+</section>
 
+<div style="text-align:center; padding-bottom:-30px;">
+  <button type="button" class="btn btn-success" ><a href="{% url 'article:addFellowship' %}">Add Article</a></button>
+  <p style="font-style: italic;">Kindly Contribute to the Fellowship Opportunities database. The Fellowship opportunity added by you will only appear on the website after admin approval(This was neccessary
+    to prevent bots from posting.) Thank you so much in advance for contributing</p>
 </div>
-
-
-{% if articles %}
-
-{% for article in articles %}
-<div class="row">
-    <div class="col-md-10 offset-md-3">
-
-    <!-- Post Content Column -->
-    <div class="col-lg-8">
-
-      <!-- Title -->
-      <a href="{% url 'article:detail' article.slug %}"><h2 class="mt-4">{{article.title}}</h2></a>
-
-      <!-- Author -->
-      <p class="lead">
-
-        {{article.author.username}} published by
-      </p>
-
-      <hr>
-
-      <!-- Date/Time -->
-      <p>{{article.created_date}}</p>
-      <hr>
-      <!-- Preview Image -->
-      {% if article.article_image %}
-      <a href="{% url 'article:detail' article.slug %}"><img class="img-fluid rounded" src="{{article.article_image.url}}" alt=""></a>
-      {% endif %}
-
-
-      <hr>
-
-      <!-- Post Content -->
-      <p class="lead">
-          {{article.content|safe|truncatewords:50}}
-      </p>
-
-      <a href="{% url 'article:detail' article.slug %}" class ="btn btn-danger my-3">Read more</a>
-      <hr>
-
-        </div>
-      </div>
-      </div>
-
-{% endfor %}
-
-
-{% else %}
-<div class ="row">
-
-    <div class="col-md-10 offset-md-3">
+<!-- Main Blog Post Content -->
+	<section class="blog_post_container bgc-fa">
+		<div class="container">
+			<div class="row">
         <div class="col-lg-8">
-<div class = "alert alert-danger">  
-No Article Found
-</div>
-</div>
-</div>
-</div>
-{% endif %}
+				<div class="main_blog_post_content">
+					<div class="row">
+                    {% for article in articles %}
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 pr15-xl">
+              <div class="blog_grid_post mb35">
+                <div class="thumb">
+                  {% if article.article_image %}
+    							 <a href="{% url 'article:detail' article.slug %}"><img class="img-fluid" src="{{article.article_image.url}}"   alt="Not Found" onerror=this.src="/media/images/blog/1.jpg" ></a>
 
-{% endblock body %}
+                   {% else %}
+                   	 <a href="{% url 'article:detail' article.slug %}"><img class="img-fluid" src="/media/images/blog/1.jpg"  alt="13.jpg"></a>
+                       {% endif %}
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 pl15-xl">
+              <div class="blog_grid_post style2 mb35">
+                <div class="details">
+                  <a href="{% url 'article:detail' article.slug %}"><h4 style="color:blue;">{{ article.title}}</h4></a>
+                  	<!-- <h5>@UmojaCamels: Posted by: {% if article.name %} {{article.name}} {% else%} Anonymous Post{% endif%}</h5> -->
+                  <ul class="post_meta">
+                    <li><a href="#"><span class="flaticon-clock"></span></a></li>
+                    <li><a href="#"><span>Author: {% if article.name %} {{article.name}} {% else%} Anonymous Post{% endif%}</span></a></li>
+                    <li><a href="#"><span>{{ article.created_date}}</span></a></li>
+                    <!-- <li><a href="#"><span class="flaticon-chat"></span></a></li> -->
+
+                  </ul>
+                  <p> {{ article.content|truncatewords_html:15|safe }}</p>
+                  <a class="text-thm" href="{% url 'article:detail' article.slug %}">Read More <span class="flaticon-right-arrow pl10"></span></a>
+                </div>
+              </div>
+            </div>
+            {%  endfor %}
+					</div>
+				</div>
+        </div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<section class="inner_page_breadcrumb bgc-f0 pt30 pb30" aria-label="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h4 class="breadcrumb_title float-left"></h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="text-align:center; padding-bottom:-30px;">
+  <button type="button" class="btn btn-success" ><a href="{% url 'article:addImage' %}">Add Image</a></button>
+  <p style="font-style: italic;"> The Image  added by you will only appear on the website after admin approval(This was neccessary
+    to prevent bots from posting.) Thank you so much in advance for contributing</p>
+</div>
+
+<section class="job-location pb30">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ulockd-main-title">
+          <h3 class="mt0">Umoja Gallery</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {% for image in gallerys %}
+
+      <div class="col-sm-6 col-lg-4" >
+        <a href="#" class="job_loc_img_box">
+          <div class="thumb" style="max-width:361px;max-height:300px;"><img class="img-fluid" src="{{image.image.url}}" alt="9.jpg" ></div>
+          <div class="details">
+            <h4>{%if image.eventName %} {{image.eventName}} {%endif %}</h4>
+            <h5>{%if image.eventDate %} {{image.eventDate}} {%endif %}</h5>
+          </div>
+        </a>
+      </div>
+
+      {%endfor%}
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
