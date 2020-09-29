@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 
 from article import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('umoja-admin/', admin.site.urls),
     path('',views.index,name = "index"),
     path('about/',views.about,name = "about"),
     path('articles/',include("article.urls")),

@@ -5,14 +5,14 @@
 <br><br><br><br>
 <div class="row">
     <div class="col-md-6 offset-md-3">
-        <h3>Add Achievement</h3>
+        <h3>Add Program</h3>
 
         <form method = "post" enctype="multipart/form-data">
             {% csrf_token %}
             {{form.media}}
             {{form|crispy}}
             <br>
-            <button type = "submit" class = "btn btn-danger">Add Achievement</button>
+            <button type = "submit" class = "btn btn-danger">Add programs</button>
         </form>
     </div>
   </div>

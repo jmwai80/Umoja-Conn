@@ -13,7 +13,7 @@
 <!-- Responsive stylesheet -->
 <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 <!-- Title -->
-<title>CareerUp - The Most Popular Job Board HTML Template</title>
+<title>Umoja Conncoll</title>
 <!-- Favicon -->
 <link href="media/images/favicon.ico" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
 <link href="media/images/favicon.ico" sizes="128x128" rel="shortcut icon" />
@@ -30,16 +30,16 @@
   		    <!-- Ace Responsive Menu -->
   		    <nav>
   		        <!-- Menu Toggle btn-->
-  		        <div class="menu-toggle">
-  		            <img class="nav_logo_img img-fluid" src="/media/images/header-logo.png" alt="header-logo.png">
+  		        <div class="menu-toggle"  style="height:20px;" >
+  		            <img class="nav_logo_img img-fluid" src="/media/images/umoja2.png" alt="header-logo.png" style="height:20px;">
   		            <button type="button" id="menu-btn">
   		                <span class="icon-bar"></span>
   		                <span class="icon-bar"></span>
   		                <span class="icon-bar"></span>
   		            </button>
   		        </div>
-  		        <a href="{% url 'index' %}" class="navbar_brand float-left dn-smd">
-  		            <img class="img-fluid" src="/media/images/header-logo.png" alt="header-logo.png">
+  		        <a href="{% url 'index' %}" class="navbar_brand float-left dn-smd" >
+  		            <img class="img-fluid" src="/media/images/umoja2.png" alt="header-logo.png"  style="height:50px; padding-top:10px;">
   		        </a>
   		        <!-- Responsive Menu Structure-->
   		        <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
@@ -60,15 +60,14 @@
   		            </li>
 
   		            <li>
-  		                <a href="{% url 'article:articles' %}"><span class="title">Blog</span></a>
+  		                <a href="{% url 'article:articles' %}"><span class="title">Student Works</span></a>
   		                <!-- Level Two-->
   		            </li>
+  		            <!-- <li>
+  		                <a href="{% url 'article:resources' %}"><span class="title">Resources</span></a>
+  		            </li> -->
   		            <li>
-  		                <a href="{% url 'article:resources' %}"><span class="title">BLM Resources</span></a>
-  		                <!-- Level Two-->
-  		            </li>
-  		            <li>
-  		                <a href="{% url 'article:gallerys' %}"><span class="title">Gallery</span></a>
+  		                <a href="{% url 'article:gallerys' %}"><span class="title">Gallery &#128151;</span></a>
   		                <!-- Level Two-->
   		            </li>
   		            <li>
@@ -76,116 +75,17 @@
   		                <!-- Level Two-->
   		            </li>
   		        </ul>
-  		        <ul class="sign_up_btn pull-right dn-smd">
-  	                <li class="list-inline-item"><a href="#" class="btn btn-md">Post New Job</a></li>
-  	                <li class="list-inline-item"><a href="#" class="btn btn-md" data-toggle="modal" data-target="#exampleModalCenter">Log<span class="dn-md">in</span>/Reg<span class="dn-md">ister</span></a></li>
-  	            </ul>
   		    </nav>
   		    <!-- End of Responsive Menu -->
   		</div>
   	</header>
-  	<!-- Modal -->
-  	<div class="sign_up_modal modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-  	  	<div class="modal-dialog modal-dialog-centered" role="document">
-  	    	<div class="modal-content">
-  		      	<div class="modal-header">
-  		        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  		      	</div>
-  	    		<ul class="sign_up_tab nav nav-tabs" id="myTab" role="tablist">
-  				  	<li class="nav-item">
-  				    	<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Login</a>
-  				  	</li>
-  				  	<li class="nav-item">
-  				    	<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Register</a>
-  				  	</li>
-  				</ul>
-  				<div class="tab-content" id="myTabContent">
-  				  	<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-  						<div class="login_form">
-  							<form action="#">
-  								<div class="heading">
-  									<h3 class="text-center">Quick Login</h3>
-  									<p class="text-center">Don't have an account? <a class="text-thm" href="#">Sign Up!</a></p>
-  								</div>
-  								 <div class="form-group">
-  							    	<input type="email" class="form-control"resource id="exampleInputEmail1" placeholder="Enter email">
-  								</div>
-  								<div class="form-group">
-  							    	<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  								</div>
-  								<div class="form-group form-check">
-  									<input type="checkbox" class="form-check-input" id="exampleCheck1">
-  									<label class="form-check-label" for="exampleCheck1">Remember me</label>
-  									<a class="tdu text-thm float-right" href="#">Forgot Password?</a>
-  								</div>
-  								<button type="submit" class="btn btn-log btn-block btn-thm">Login</button>
-  								<hr>
-  								<div class="row mt40">
-  									<div class="col-lg">
-  										<button type="submit" class="btn btn-block color-white bgc-fb"><i class="fa fa-facebook float-left mt5"></i> Facebook</button>
-  									</div>
-  									<div class="col-lg">
-  										<button type="submit" class="btn btn-block color-white bgc-gogle"><i class="fa fa-google float-left mt5"></i> Google</button>
-  									</div>
-  								</div>
-  							</form>
-  						</div>
-  				  	</div>
-  				  	<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-  						<div class="sign_up_form">
-  							<div class="heading">
-  								<h3 class="text-center">Create New Account</h3>
-  								<p class="text-center">Don't have an account? <a class="text-thm" href="#">Sign Up!</a></p>
-  							</div>
-  							<form action="#">
-  								<div class="form-group">
-  							    	<input type="text" class="form-control" id="exampleInputName1" placeholder="User Name">
-  								</div>
-  								 <div class="form-group">
-  							    	<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email">
-  								</div>
-  								<div class="form-group">
-  							    	<input type="number" class="form-control" id="exampleInputPhone1" placeholder="Phone Number">
-  								</div>
-  								<div class="form-group">
-  									<select id="inputState1" class="form-control">
-  								        <option selected>Select Sector</option>
-  								        <option>Web Developer</option>
-  								        <option>Ui/Ux Designer</option>
-  								        <option>Photoeditor</option>
-  								        <option>Graphics Designer</option>
-  								    </select>
-  								</div>
-  								<div class="form-group">
-  							    	<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-  								</div>
-  								<div class="form-group form-check">
-  									<input type="checkbox" class="form-check-input" id="exampleCheck2">
-  									<label class="form-check-label" for="exampleCheck2">By Registering You Confirm That You Accept <a class="text-thm" href="page-terms-and-policies.html">Terms & Conditions</a> And <a class="text-thm" href="page-terms-and-policies.html">Privacy Policy</a></label>
-  								</div>
-  								<button type="submit" class="btn btn-log btn-block btn-dark">Register</button>
-  								<hr>
-  								<div class="row mt40">
-  									<div class="col-lg">
-  										<button type="submit" class="btn btn-block color-white bgc-fb"><i class="fa fa-facebook float-left mt5"></i> Facebook</button>
-  									</div>
-  									<div class="col-lg">
-  										<button type="submit" class="btn btn-block color-white bgc-gogle"><i class="fa fa-google float-left mt5"></i> Google</button>
-  									</div>
-  								</div>
-  							</form>
-  						</div>
-  				  	</div>
-  				</div>
-  	    	</div>
-  	  	</div>
-  	</div>
+
 
   	<!-- Main Header Nav For Mobile -->
   	<div id="page" class="stylehome1 h0">
   		<div class="mobile-menu">
   			<div class="header stylehome1 home4">
-  	            <img class="nav_logo_img img-fluid float-left mt25" src="/media/images/header-logo.png" alt="header-logo.png">
+  	            <img class="nav_logo_img img-fluid float-left mt25" src="/media/images/umoja2.png" alt="Umoja Camels"  style="height:50px;">
   				<a class="bgc-darkblue" href="#menu"><span></span></a>
   			</div>
   		</div><!-- /.mobile-menu -->
@@ -222,10 +122,6 @@
   		                <a href="{% url 'about' %}"><span>About</span></a>
   		                <!-- Level Two-->
   		            </li>
-
-
-  				<li><a href="{% url 'article:post_opportunity' %}">Post a Job</a></li>
-  				<li><a class="text-thm" href="{% url 'article:post_opportunity' %}">Login/Register</a></li>
   			</ul>
   		</nav>
   	</div>
@@ -238,25 +134,15 @@
     			<div class="row">
     				<div class="col-lg-6 offset-lg-3 text-center">
     					<div class="logo-widget">
-    						<img class="img-fluid" src="/media/images/header-logo4.png" alt="header-logo4.png">
+    						<img class="img-fluid" src="/media/images/umoja2.png" alt="header-logo4.png">
     					</div>
     					<div class="footer_social_widget home4 mt35">
     						<ul>
     							<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-    							<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+    							<li class="list-inline-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
     							<li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
-    							<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-    							<li class="list-inline-item"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+
     						</ul>
-    					</div>
-    					<div class="newsletter_widget home4 mt40">
-    						<h4>Subscribe Newsletter</h4>
-    						<p>Subscribe to CareerUp Pacific newsletter to get  the latest jobs posted.</p>
-    						<form class="form-inline mailchimp_form">
-    							<label class="sr-only" for="inlineFormInputMail2">Name</label>
-    							<input type="email" class="form-control mb-2 mr-sm-2" id="inlineFormInputMail2" placeholder="Enter your email address">
-    							<button type="submit" class="btn btn-primary mb-2"><span class="fa fa-paper-plane-o"></span></button>
-    						</form>
     					</div>
     				</div>
     			</div>
