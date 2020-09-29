@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "user",
     'crispy_forms',
     "ckeditor",
+    'trix',
     'django_cleanup',
     'bootstrap4',
 
@@ -124,6 +125,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+
+TRIX_EXTENSIONS = ['.jpg', '.png']
+TRIX_URI = 'trix'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
