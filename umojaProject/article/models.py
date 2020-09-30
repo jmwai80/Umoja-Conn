@@ -1,5 +1,7 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from trix.fields import TrixField
+
 # Create your models here.
 
 class Article(models.Model):
@@ -68,3 +70,6 @@ class Gallery(models.Model):
     eventName = models.CharField(max_length=1000, null=True,blank=True)
     eventDate = models.CharField(max_length=1000, null=True, blank=True)
     admin_approved = models.BooleanField(default=False)
+
+class Post(models.Model):
+    content = TrixField('Content')

@@ -1,5 +1,6 @@
 from django import forms
 from .models import Article, Internship, Fellowship, Program, Gallery
+from trix.widgets import TrixEditor
 
 class ArticleForm(forms.ModelForm):
     class Meta:
@@ -25,3 +26,8 @@ class ImageForm(forms.ModelForm):
     class Meta:
         model = Gallery
         fields = ["image","eventName", "eventDate"]
+
+from trix.widgets import TrixEditor
+
+class EditorForm(forms.Form):
+    content = forms.CharField(widget=TrixEditor)

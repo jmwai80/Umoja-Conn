@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Article,Comment, Program, Internship, Fellowship, Resource, Gallery
+from .models import Article,Comment, Program, Internship, Fellowship, Resource, Gallery, Post
 
 # Register your models here.
 
@@ -29,3 +29,9 @@ class ArticleAdmin(admin.ModelAdmin):
 class GalleryInline(admin.TabularInline):
     model = Gallery
     fields = ['picture',]
+
+from trix.admin import TrixAdmin
+
+@admin.register(Post)
+class PostAdmin(TrixAdmin, admin.ModelAdmin):
+    trix_fields = ('content',)
