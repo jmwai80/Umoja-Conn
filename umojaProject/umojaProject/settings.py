@@ -95,7 +95,19 @@ DATABASES = {
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
+    {#email
+152
+EMAIL_HOST  =  'smtp.gmail.com'
+153
+EMAIL_PORT = '587'
+154
+EMAIL_HOST_USER = 'jmwai@conncoll.edu'
+155
+EMAIL_HOST_PASSWORD =  '80C64r22*!32'
+156
+EMAIL_USE_TLS = True
+157
+# EMAIL_USE_SSL = False
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
@@ -148,10 +160,4 @@ CKEDITOR_CONFIGS = {
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-#email
-EMAIL_HOST  =  'smtp.gmail.com'
-EMAIL_PORT = '587'
-EMAIL_HOST_USER = 'jmwai@conncoll.edu'
-EMAIL_HOST_PASSWORD =  '80C64r22*!32'
-EMAIL_USE_TLS = True
-# EMAIL_USE_SSL = False
+
