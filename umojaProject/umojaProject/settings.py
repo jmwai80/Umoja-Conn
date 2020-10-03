@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'trix',
     'django_cleanup',
     'bootstrap4',
+    'images',
 
 ]
 

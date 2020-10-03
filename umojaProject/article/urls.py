@@ -11,7 +11,7 @@ urlpatterns = [
     path('resources/',views.resources,name = "resources"),
     path('internships/',views.internships,name = "internships"),
     path('programs/',views.programs,name = "programs"),
-    path('recent_articles/',views.recent_articles,name = "recent_articles"),
+    # path('recent_articles/',views.recent_articles,name = "recent_articles"),
     # path('addarticle/',views.addArticle,name = "addarticle"),
     path('fellowships/',views.fellowships,name = "fellowships"),
     path('gallerys/',views.gallerys,name = "gallerys"),
@@ -23,6 +23,7 @@ urlpatterns = [
     path('addProgram/',views.addProgram,name = "addProgram"),
     path('addResource/',views.addResource,name = "addResource"),
     path('addArticle/',views.addArticle,name = "addArticle"),
+    path('addProfile/',views.addProfile,name = "addProfile"),
 
 
 

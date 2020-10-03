@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Article,Comment, Program, Internship, Fellowship, Resource, Gallery, Post
+from .models import Article,Comment, Program, Internship, Fellowship, Resource, Gallery, Post, Profile, FeaturedStudent
 
 # Register your models here.
 
@@ -10,6 +10,8 @@ admin.site.register(Internship)
 admin.site.register(Fellowship)
 admin.site.register(Resource)
 admin.site.register(Gallery)
+admin.site.register(Profile)
+admin.site.register(FeaturedStudent)
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
 

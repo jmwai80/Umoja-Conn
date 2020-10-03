@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <!-- Responsive stylesheet -->
 <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+
 <!-- Title -->
 <title>Umoja Conncoll</title>
 <!-- Favicon -->
@@ -19,6 +21,38 @@
 <link href="media/images/favicon.ico" sizes="128x128" rel="shortcut icon" />
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js' %}"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js' %}"></script>
+<style media="screen">
+.quotation{
+font-size: 18px;
+//margin: 0 auto;
+quotes: "\201C""\201D""\2018""\2019";
+padding: 10px 20px;
+line-height: 1.4;
+}
+
+.quotation:before {
+content: open-quote;
+display: inline;
+height: 0;
+line-height: 0;
+left: -10px;
+position: relative;
+top: 30px;
+color: #ccc;
+font-size: 3em;
+}
+.quotation::after {
+content: close-quote;
+display: inline;
+height: 0;
+line-height: 0;
+left: 10px;
+position: relative;
+top: 35px;
+color: #ccc;
+font-size: 3em;
+}
+</style>
 </head>
 <body>
   <div class="wrapper">
@@ -60,7 +94,7 @@
   		            </li>
 
   		            <li>
-  		                <a href="{% url 'article:articles' %}"><span class="title">Student Works</span></a>
+  		                <a href="{% url 'article:articles' %}"><span class="title">Posts</span></a>
   		                <!-- Level Two-->
   		            </li>
   		            <!-- <li>
@@ -97,26 +131,24 @@
   		            </li>
   		            <li>
   		                <a ><span>Career Opportunities</span></a>
-  		                <ul>
-  		                    <li><a href="{% url 'index' %}">Internships</a></li>
-  		                    <li><a href="{% url 'index' %}">Fellowships</a></li>
-  		                    <li><a href="{% url 'index' %}">Diversity Programs</a></li>
-  		                </ul>
+                      <ul>
+                          <li><a href="{% url 'article:internships' %}">Internships</a></li>
+                          <li><a href="{% url 'article:fellowships' %}">Fellowships</a></li>
+                          <li><a href="{% url 'article:programs' %}">Diversity Programs</a></li>
+                      </ul>
   		                <!-- Level Two-->
 
   		            </li>
 
   		            <li>
-  		                <a href="{% url 'article:articles' %}"><span>Blog</span></a>
+  		                <a href="{% url 'article:articles' %}"><span>Posts</span></a>
   		                <!-- Level Two-->
   		            </li>
-  		            <li>
+  		            <!-- <li>
   		                <a href="{% url 'about' %}"><span>BLM Resources</span></a>
-  		                <!-- Level Two-->
-  		            </li>
+  		            </li> -->
   		            <li>
-  		                <a href="#"><span>Gallery</span></a>
-  		                <!-- Level Two-->
+  		               <a href="{% url 'article:gallerys' %}"><span>Gallery &#128151;</span></a>
   		            </li>
   		            <li>
   		                <a href="{% url 'about' %}"><span>About</span></a>
@@ -185,5 +217,7 @@
 <script type="text/javascript" src="{% static 'js/timepicker.js' %}"></script>
 <!-- Custom script for all pages -->
 <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+
 </body>
 </html>

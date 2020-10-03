@@ -674,7 +674,7 @@ header.header-nav.menu_style_home_six .sign_up_btn .btn{
     background-image:none
 }
 .home_bg2:after{
-    background-image:url(../images/home/home2_bg.png);
+    background-image:url(/media/images/home/home2_bg.png);
     background-repeat:no-repeat;
     background-position:right;
     bottom:0;
@@ -695,7 +695,7 @@ header.header-nav.menu_style_home_six .sign_up_btn .btn{
     background-image:linear-gradient(60deg, rgb(69,104,220) 0%, rgb(176,106,179) 100%);
 }
 .home_bg3:after{
-    background-image:url(../images/home/home3_bg.png);
+    background-image:url(/media/images/home/home3_bg.png);
     background-repeat:no-repeat;
     background-position:right;
     bottom:0;
@@ -734,7 +734,7 @@ header.header-nav.menu_style_home_six .sign_up_btn .btn{
     background:linear-gradient(60deg,#4568dc 0,#7b69c7 50%,#b06ab3 100%)
 }
 .home_bg6:after{
-    background-image:url(../images/home/home6_bg.png);
+    background-image:url(/media/images/home/home6_bg.png);
     background-repeat:no-repeat;
     background-position:center center;
     bottom:-120px;
@@ -820,7 +820,7 @@ header.header-nav.menu_style_home_six .sign_up_btn .btn{
     line-height:40px
 }
 .home6-divider{
-    background-image:url(../images/background/2.jpg);
+    background-image:url(/media/images/background/2.jpg);
     -webkit-background-size:cover;
     background-position:center center;
     background-size:cover;
@@ -5917,7 +5917,7 @@ header.header-nav.menu_style_home_six .sign_up_btn .btn{
     position:relative
 }
 .job_single_v4:before{
-    background-image:url(../images/about/5.png);
+    background-image:url(/media/images/about/5.png);
     background-repeat:no-repeat;
     background-position:right;
     bottom:0;
@@ -5943,7 +5943,7 @@ header.header-nav.menu_style_home_six .sign_up_btn .btn{
     position:relative
 }
 .job_single_v5_banner{
-    background-image:url(../images/background/banner1.jpg);
+    background-image:url(/media/images/background/banner1.jpg);
     background-repeat:no-repeat;
     background-position:center center;
     height:330px;
@@ -6363,7 +6363,7 @@ a.scrollToHome.text-thm:hover{
     top:0
 }
 .emplye_single_v2:before{
-    background-image:url(../images/about/6.png);
+    background-image:url(/media/images/about/6.png);
     background-repeat:no-repeat;
     background-position:right;
     bottom:0;
@@ -7965,7 +7965,7 @@ a.text-thm:hover{
 }
 .ulockd_bgi1{
     background-attachment:scroll;
-    background-image:url(../images/background/1.jpg);
+    background-image:url(/media/images/background/1.jpg);
     background-position:center top;
     background-repeat:no-repeat;
     -webkit-background-size:cover;
@@ -7975,7 +7975,7 @@ a.text-thm:hover{
 }
 .ulockd_bgi2{
     background-attachment:scroll;
-    background-image:url(../images/background/2.jpg);
+    background-image:url(/media/images/background/2.jpg);
     background-position:center top;
     background-repeat:no-repeat;
     -webkit-background-size:cover;
@@ -7985,7 +7985,7 @@ a.text-thm:hover{
 }
 .ulockd_bgi3{
     background-attachment:scroll;
-    background-image:url(../images/background/3.jpg);
+    background-image:url(/media/images/background/3.jpg);
     background-position:center top!important;
     background-repeat:no-repeat;
     -webkit-background-size:cover;
@@ -7995,7 +7995,7 @@ a.text-thm:hover{
 }
 .ulockd_bgi4{
     background-attachment:scroll;
-    background-image:url(../images/background/4.jpg);
+    background-image:url(/media/images/background/4.jpg);
     background-position:center top;
     background-repeat:no-repeat;
     -webkit-background-size:cover;
@@ -8005,7 +8005,7 @@ a.text-thm:hover{
 }
 .ulockd_bgi5{
     background-attachment:scroll;
-    background-image:url(../images/background/5.jpg);
+    background-image:url(/media/images/background/5.jpg);
     background-position:center top;
     background-repeat:no-repeat;
     -webkit-background-size:cover;
@@ -8015,7 +8015,7 @@ a.text-thm:hover{
 }
 .ulockd_bgi6{
     background-attachment:scroll;
-    background-image:url(../images/background/6.jpg);
+    background-image:url(/media/images/background/6.jpg);
     background-position:center 40%;
     background-repeat:no-repeat;
     -webkit-background-size:cover;
@@ -8025,7 +8025,7 @@ a.text-thm:hover{
 }
 .ulockd_bgs1{
     background-attachment:scroll;
-    background-image:url(../images/background/split-one.jpg);
+    background-image:url(/media/images/background/split-one.jpg);
     background-position:right center;
     background-repeat:no-repeat;
     -webkit-background-size:cover;
@@ -8035,7 +8035,7 @@ a.text-thm:hover{
 }
 .ulockd_bgih1{
     background-attachment:scroll;
-    background-image:url(../images/home/h1.jpg);
+    background-image:url(/media/images/home/h1.jpg);
     background-position:center right !important;
     background-repeat:no-repeat;
     -webkit-background-size:cover;
@@ -8046,7 +8046,7 @@ a.text-thm:hover{
 }
 .ulockd_bgih2{
     background-attachment:scroll;
-    background-image:url(../images/home/h2.jpg);
+    background-image:url(/media/images/home/h2.jpg);
     background-position:center bottom!important;
     background-repeat:no-repeat;
     -webkit-background-size:cover;
@@ -8056,7 +8056,7 @@ a.text-thm:hover{
 }
 .ulockd_bgih3{
     background-attachment:scroll;
-    background-image:url(../images/home/h3.jpg);
+    background-image:url(/media/images/home/h3.jpg);
     background-position:center top;
     background-repeat:no-repeat;
     -webkit-background-size:cover;
@@ -8066,7 +8066,7 @@ a.text-thm:hover{
 }
 .ulockd_bgih4{
     background-attachment:scroll;
-    background-image:url(../images/home/h4.jpg);
+    background-image:url(/media/images/home/h4.jpg);
     background-position:center top;
     background-repeat:no-repeat;
     -webkit-background-size:cover;
@@ -8076,7 +8076,7 @@ a.text-thm:hover{
 }
 .ulockd_bgih5{
     background-attachment:scroll;
-    background-image:url(../images/home/h5.jpg);
+    background-image:url(/media/images/home/h5.jpg);
     background-position:center top;
     background-repeat:no-repeat;
     -webkit-background-size:cover;
@@ -8086,27 +8086,27 @@ a.text-thm:hover{
 }
 .ulockd_bgp1{
     background-attachment:scroll;
-    background-image:url(../images/pattern/1.png)
+    background-image:url(/media/images/pattern/1.png)
 }
 .ulockd_bgp2{
     background-attachment:scroll;
-    background-image:url(../images/pattern/2.png)
+    background-image:url(/media/images/pattern/2.png)
 }
 .ulockd_bgp3{
     background-attachment:scroll;
-    background-image:url(../images/pattern/3.png)
+    background-image:url(/media/images/pattern/3.png)
 }
 .ulockd_bgp4{
     background-attachment:scroll;
-    background-image:url(../images/pattern/4.png)
+    background-image:url(/media/images/pattern/4.png)
 }
 .ulockd_bgp5{
     background-attachment:scroll;
-    background-image:url(../images/pattern/5.png)
+    background-image:url(/media/images/pattern/5.png)
 }
 .ulockd_bgp6{
     background-attachment:scroll;
-    background-image:url(../images/pattern/6.png);
+    background-image:url(/media/images/pattern/6.png);
     background-repeat:no-repeat
 }
 section{
@@ -8422,7 +8422,7 @@ section{
 }
 .divider{
     background-attachment:scroll!important;
-    background-image:url(../images/background/1.jpg);
+    background-image:url(/media/images/background/1.jpg);
     background-position:center center;
     background-repeat:no-repeat;
     -webkit-background-size:cover;

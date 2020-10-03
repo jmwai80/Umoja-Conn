@@ -10,8 +10,8 @@
   </div>
 </section>
 
-<div style="text-align:center; padding-bottom:-30px;">
-  <button type="button" class="btn btn-success" ><a href="{% url 'article:addFellowship' %}">Add Article</a></button>
+<div style="text-align:center; padding-bottom:-30px;" class ="alert alert-danger">
+  <button type="button" class="btn btn-success" ><a href="{% url 'article:addArticle' %}">Add Article</a></button>
   <p style="font-style: italic;">Kindly Contribute to the Fellowship Opportunities database. The Fellowship opportunity added by you will only appear on the website after admin approval(This was neccessary
     to prevent bots from posting.) Thank you so much in advance for contributing</p>
 </div>
@@ -47,7 +47,7 @@
                     <!-- <li><a href="#"><span class="flaticon-chat"></span></a></li> -->
 
                   </ul>
-                  <p> {{ article.content|truncatewords_html:15|safe }}</p>
+                  <!-- <p> {{ article.content|truncatewords_html:15|safe }}</p> -->
                   <a class="text-thm" href="{% url 'article:detail' article.slug %}">Read More <span class="flaticon-right-arrow pl10"></span></a>
                 </div>
               </div>

@@ -1,6 +1,6 @@
 from django.shortcuts import render,HttpResponse,redirect,get_object_or_404,reverse
-from .forms import ArticleForm, InternshipForm, ImageForm, FellowshipForm, ProgramForm
-from .models import Article,Comment,Resource, Internship, Fellowship, Program, Gallery
+from .forms import ArticleForm, InternshipForm, ImageForm, FellowshipForm, ProgramForm, ProfileForm
+from .models import Article,Comment,Resource, Internship, Fellowship, Program, Gallery, Profile, FeaturedStudent
 from django.contrib import messages
 from django.template.defaultfilters import slugify
 from django.db.models import Count
@@ -21,9 +21,13 @@ def recent_articles(request):
     recent_articles = Article.objects.filter(published=True).order_by('-created_date')[:8]
     return render(request,"index.html",{"recent_articles":recent_articles})
 
-def index(request):
+def about(request):
+    profiles = Profile.objects.all()
+    return render(request, "about.html", {'profiles': profiles})
 
-    return render(request,"index.html")
+def index(request):
+    featuredStudents = FeaturedStudent.objects.filter(published=True).order_by('-created_date')[:5]
+    return render(request,"index.html", {"featuredStudents":featuredStudents})
 
 
 def post_opportunity(request):
@@ -67,8 +71,8 @@ def gallerys(request):
     gallerys = Gallery.objects.filter(admin_approved=True)
     return render(request, 'gallerys.html', {'gallerys':gallerys})
 
-def about(request):
-    return render(request,"about.html")
+# def about(request):
+#     return render(request,"about.html")
 
 def addInternship(request):
     form = InternshipForm(request.POST or None,request.FILES or None)
@@ -125,6 +129,16 @@ def addImage(request):
         return redirect("article:gallerys")
     return render(request,"addImage.html",{"form":form})
 
+def addProfile(request):
+    form = ProfileForm(request.POST or None,request.FILES or None)
+
+    if form.is_valid():
+        about = form.save(commit=False)
+        about.save()
+
+        messages.success(request,"Profile Added Successfully")
+        return redirect("about")
+    return render(request,"addProfile.html",{"form":form})
 # def addAchievement(request):
 #     form = ArticleForm(request.POST or None,request.FILES or None)
 #
